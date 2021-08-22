@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import PropTypes from 'prop-types'
 import './table.css';
 
 /**
@@ -260,5 +261,9 @@ const Table = (props) => {
         </div>
     );
 };
+
+Table.propTypes = {
+    state: PropTypes.object.isRequired,
+}
 
 export default Table;
