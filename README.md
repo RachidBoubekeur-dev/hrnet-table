@@ -1,16 +1,18 @@
-## datatablereactoc
+## hrnet-table
 
+### hrnet-table is an open-source react plug-in for boosting an HTML table
 
 ### Install
 
-Install using `npm install datatablereactoc`
+Install using `npm install hrnet-table`
 
 ### Usage 
 
-In a React app, use the Table components:  
-`import { Table } de 'datatablereactoc'`
+```javascript
+// Example one
+import Table from 'hrnet-table';
 
-`state = {
+state = {
     employee = [
         {
             FirstName: 'Xavier',
@@ -35,6 +37,18 @@ In a React app, use the Table components:
             ZipCode: '13994',
         }
     ]
-}`
+}
 
-`<Table state={state}>`
+<Table state={state}>`
+```
+
+```javascript
+// Example two
+import { useSelector } from 'react-redux';
+import { employeeSelector } from '../../slice/Employee';
+import Table from 'hrnet-table';
+
+const state = useSelector(employeeSelector);
+
+<Table state={state}>`
+```
